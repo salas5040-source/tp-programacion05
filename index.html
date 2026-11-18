@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de compras - Supermercado</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-100 min-h-screen flex items-center justify-center p-4 font-sans text-slate-800">
+
+    <main class="bg-white w-full max-w-md rounded-2xl shadow-lg p-6 sm:p-8 border border-slate-200 space-y-6">
+        
+        <h1 class="text-2xl font-bold text-slate-900 text-center">Lista de compras del Supermercado</h1>
+
+        <div class="space-y-2">
+            <label for="inputAgregar" class="block text-sm font-medium text-slate-700">Producto a agregar:</label>
+            <div class="flex gap-2">
+                <input type="text" id="inputAgregar" placeholder="Ej: pan" class="flex-1 rounded-lg border border-slate-300 px-3 py-2 text-sm focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-200 transition">
+                <button id="btnAgregar" class="bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white font-medium px-4 py-2 rounded-lg text-sm transition cursor-pointer shadow-sm">Agregar</button>
+            </div>
+        </div>
+
+        <hr class="border-slate-200">
+
+        <div class="space-y-2">
+            <label for="inputEliminar" class="block text-sm font-medium text-slate-700">Producto a eliminar:</label>
+            <div class="flex gap-2">
+                <input type="text" id="inputEliminar" placeholder="Ej: harina" class="flex-1 rounded-lg border border-slate-300 px-3 py-2 text-sm focus:border-rose-500 focus:outline-none focus:ring-2 focus:ring-rose-200 transition">
+                <button id="btnEliminar" class="bg-rose-600 hover:bg-rose-700 active:bg-rose-800 text-white font-medium px-4 py-2 rounded-lg text-sm transition cursor-pointer shadow-sm">Eliminar</button>
+            </div>
+        </div>
+
+        <p id="mensajeEstado" class="text-sm font-medium text-amber-800 text-center min-h-[20px]"></p>
+
+        <div>
+            <h2 class="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2">Productos en la lista:</h2>
+            <ul id="listaCompras" class="list-disc list-inside space-y-1.5 text-slate-700 bg-slate-50 p-4 rounded-xl border border-slate-200 min-h-[70px]"></ul>
+        </div>
+
+    </main>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
